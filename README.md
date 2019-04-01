@@ -19,10 +19,10 @@ I just create a simple [Bahamut Forum](https://www.gamer.com.tw/) crawler module
 * 爬資料時，可選擇是否忽略**置頂文**。
 * 爬的資料以單一帖發文為單位，其中包含該帖的主題及超連結。(其他資料如推文數、日期及作者等，因為個人目前用不到，所以尚未實作，有興趣歡迎fork and pr)
 
-## 如何使用？ (How to use it ?)
+## 如何在您的專案使用？ (How to use it in your project ?)
 * 從Github下載baha-crawler.js專案程式碼。  
 ```
-git clone https://github.com/WayneChang65/baha-crawler.js.git baha-crawler
+git clone https://github.com/WayneChang65/baha-crawler.js.git
 ```
 * 在您的專案環境中，下載[puppeteer](https://github.com/GoogleChrome/puppeteer)模組。
 ```
@@ -33,17 +33,13 @@ npm install puppeteer --save
 
 * 接下來，用**async函式**包含三行程式就搞定了。
 ```javascript
-const BAHA_BOARD = '23805';
-const PAGES = 3;
-const SKIP_TOPPOSTS = true;
+// *** Initialize ***
+await baha_crawler.initialize();
 
-// *** Initialize *** 要爬的板名編號. e.g. ToS版(23805), 極速版(35860), ...
-await baha_crawler.initialize(BAHA_BOARD);
+// *** GetResult  ***
+let baha = await baha_crawler.getResults('23805', 3, true); // ToS版(23805, 爬 3頁, 去掉置頂文
 
-// *** GetResult  *** 爬 3 頁, 去掉置頂文 true
-let baha = await baha_crawler.getResults(PAGES, SKIP_TOPPOSTS);
-
-// *** Close      *** 關掉
+// *** Close      ***
 await baha_crawler.close();
 ```
 
@@ -52,9 +48,27 @@ await baha_crawler.close();
 { titles[], urls[] }
 ```
 
+## 如何跑範例程式？ (How to run the example ?)
+* 從Github下載baha-crawler.js專案程式碼。  
+```
+git clone https://github.com/WayneChang65/baha-crawler.js.git
+```
+* 進入baha-crawler.js專案目錄
+```
+cd baha-crawler.js
+```
+* 下載跑範例程式所需要的環境組件
+```
+npm install
+```
+* 執行範例程式
+```
+node index.js
+```
+
 ## 基本函式 (Base Methods)
 * initialize(): 初始化物件。
-* getResults(): 開始爬資料。
+* getResults(board, pages, skipTPs): 開始爬資料，board: 欲爬的巴哈版名編號，pages: 要爬幾頁，skipTPs: 是否忽略置頂文。
 * close(): 關閉物件。
 
 ## 參考網站 (Reference)
