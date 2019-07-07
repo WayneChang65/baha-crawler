@@ -12,7 +12,7 @@ async function main(){
         board: '23805',
         pages: 3,
         skipTPs: true
-    }); // ToS版(23805, 爬 3頁, 去掉置底文
+    }); // ToS版(23805), 爬 3頁, 去掉置底文
     consoleOut(baha_crawler, baha);
 
     baha = await baha_crawler.getResults({
