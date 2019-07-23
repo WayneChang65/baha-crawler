@@ -12,13 +12,13 @@ async function main(){
         board: '23805',
         pages: 3,
         skipTPs: true
-    }); // ToS版(23805), 爬 3頁, 去掉置底文
+    }); // ToS Board (23805), 3 pages, Skip fixed upper posts
     consoleOut(baha_crawler, baha);
 
     baha = await baha_crawler.getResults({
         board: '35860',
         pages: 2,
-    }); // 極速版(35860), 爬 2頁, 保留置底文
+    }); // Game Board(35860), 2 pages, keep fixed upper posts
     consoleOut(baha_crawler, baha);
 
     // *** Close      ***
