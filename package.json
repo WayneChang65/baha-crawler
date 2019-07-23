@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "node examples/demo.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --detectOpenHandles"
   },
   "repository": {
     "type": "git",
@@ -32,5 +32,8 @@
   "homepage": "https://github.com/WayneChang65/baha-crawler#readme",
   "dependencies": {
     "puppeteer": "^1.14.0"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
   }
 }
