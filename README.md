@@ -99,8 +99,10 @@ npm install
 Run it with npm. (the demo example is in ./examples/demo.js)
 
 ```
-npm start
-```
+npm run start
+```  
+
+![image](https://raw.githubusercontent.com/WayneChang65/baha-crawler/master/img/demo_result.png)  
 
 ## 基本函式 (Base Methods)
 
