@@ -1,6 +1,6 @@
 {
   "name": "@waynechang65/baha-crawler",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "A web crawler module designed to scarp data from Bahamut forum.",
   "main": "index.js",
   "files": [
