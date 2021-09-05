@@ -6,7 +6,7 @@ test('1. Test for default Options ', async () => {
 	await baha_crawler.close();
 	expect(baha.titles).toBeDefined();
 	expect(baha.urls).toBeDefined();
-}, 20000);  // 20 seconds
+}, 60000);  // 60 seconds
 
 test('2. Test for scraping "PokemonGo" board with 2 pages and containing contents of posts ' + 
 	'by skipping bottom fixed posts. ', async () => {
@@ -20,4 +20,4 @@ test('2. Test for scraping "PokemonGo" board with 2 pages and containing content
 	await baha_crawler.close();
 	expect(baha.titles).toBeDefined();
 	expect(baha.urls).toBeDefined();
-}, 180000); // 3 minutes
+}, 5 * 60000); // 5 minutes
