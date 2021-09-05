@@ -1,5 +1,6 @@
 [![npm](https://img.shields.io/npm/v/@waynechang65/baha-crawler.svg)](https://www.npmjs.com/package/@waynechang65/baha-crawler)
 [![npm](https://img.shields.io/npm/dm/@waynechang65/baha-crawler.svg)](https://www.npmjs.com/package/@waynechang65/baha-crawler)
+[![Npm package total downloads](https://badgen.net/npm/dt/@waynechang65/baha-crawler)](https://npmjs.ccom/package/@waynechang65/baha-crawler)
 [![Build Status](https://travis-ci.org/WayneChang65/baha-crawler.svg?branch=master)](https://travis-ci.org/WayneChang65/baha-crawler)
 [![GitHub](https://img.shields.io/github/license/waynechang65/baha-crawler.svg)](https://github.com/WayneChang65/baha-crawler/)
 
